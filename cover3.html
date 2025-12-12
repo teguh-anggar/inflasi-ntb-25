@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infografis Inflasi NTB November - Desember 2025</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        width: 1200px;
+        min-height: 1700px;
+        padding: 0;
+        position: relative;
+      }
+
+      /* Header Section */
+      .header {
+        background: linear-gradient(
+          135deg,
+          #1a5f4a 0%,
+          #2d8a6e 50%,
+          #1a5f4a 100%
+        );
+        color: white;
+        padding: 25px 30px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header-left {
+        flex: 1;
+      }
+
+      .header-title {
+        font-size: 28px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .header-subtitle {
+        font-size: 20px;
+        font-weight: 600;
+        color: #ffd700;
+        margin-bottom: 3px;
+      }
+
+      .header-date {
+        font-size: 13px;
+        opacity: 0.9;
+        font-weight: 500;
+      }
+
+      .header-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo-placeholder {
+        width: 70px;
+        height: 70px;
+        background: white;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: #1a5f4a;
+        font-size: 11px;
+        text-align: center;
+        padding: 5px;
+      }
+
+      /* Main Inflation Box */
+      .inflation-highlight {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 30px;
+        background: linear-gradient(180deg, #f0f4f0 0%, #ffffff 100%);
+      }
+
+      .inflation-box {
+        flex: 1;
+        max-width: 350px;
+        background: white;
+        border-radius: 12px;
+        padding: 18px 20px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        border: 2px solid transparent;
+        position: relative;
+      }
+
+      .inflation-box.mtm {
+        border-color: #6a1b9a;
+        background: linear-gradient(180deg, #f3e5f5 0%, white 30%);
+      }
+
+      .inflation-box.ytd {
+        border-color: #1565c0;
+        background: linear-gradient(180deg, #e3f2fd 0%, white 30%);
+      }
+
+      .inflation-box.yoy {
+        border-color: #2e7d32;
+        background: linear-gradient(180deg, #e8f5e9 0%, white 30%);
+      }
+
+      .inflation-label {
+        font-size: 11px;
+        font-weight: 700;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        padding: 4px 12px;
+        background: #f5f5f5;
+        border-radius: 15px;
+        display: inline-block;
+      }
+
+      .inflation-box.mtm .inflation-label {
+        background: #6a1b9a;
+        color: white;
+      }
+      .inflation-box.ytd .inflation-label {
+        background: #1565c0;
+        color: white;
+      }
+      .inflation-box.yoy .inflation-label {
+        background: #2e7d32;
+        color: white;
+      }
+
+      .inflation-value {
+        font-size: 48px;
+        font-weight: 900;
+        margin: 5px 0;
+      }
+
+      .inflation-box.mtm .inflation-value {
+        color: #6a1b9a;
+      }
+      .inflation-box.ytd .inflation-value {
+        color: #1565c0;
+      }
+      .inflation-box.yoy .inflation-value {
+        color: #2e7d32;
+      }
+
+      .inflation-desc {
+        font-size: 11px;
+        color: #666;
+      }
+
+      /* Section Styling */
+      .section {
+        padding: 20px 30px;
+      }
+
+      .section-title {
+        font-size: 16px;
+        font-weight: 800;
+        color: #1a5f4a;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 3px solid #1a5f4a;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* City Comparison */
+      .city-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+
+      .city-card {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+        border-left: 4px solid;
+      }
+
+      .city-card:nth-child(1) {
+        border-color: #e91e63;
+      }
+      .city-card:nth-child(2) {
+        border-color: #ff9800;
+      }
+      .city-card:nth-child(3) {
+        border-color: #4caf50;
+      }
+
+      .city-name {
+        font-size: 14px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 8px;
+      }
+
+      .city-stats {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+      }
+
+      .city-stat {
+        text-align: center;
+      }
+
+      .city-stat-label {
+        font-size: 9px;
+        color: #888;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .city-stat-value {
+        font-size: 18px;
+        font-weight: 800;
+        color: #333;
+      }
+
+      /* Commodity Section */
+      .commodity-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .commodity-box {
+        background: white;
+        border-radius: 10px;
+        padding: 18px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+      }
+
+      .commodity-box.inflasi {
+        border-top: 4px solid #d32f2f;
+      }
+
+      .commodity-box.deflasi {
+        border-top: 4px solid #388e3c;
+      }
+
+      .commodity-title {
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .commodity-box.inflasi .commodity-title {
+        color: #d32f2f;
+      }
+      .commodity-box.deflasi .commodity-title {
+        color: #388e3c;
+      }
+
+      .commodity-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+      }
+
+      .commodity-box.inflasi .commodity-icon {
+        background: #ffebee;
+      }
+      .commodity-box.deflasi .commodity-icon {
+        background: #e8f5e9;
+      }
+
+      .commodity-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .commodity-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 12px;
+        background: #f8f9fa;
+        border-radius: 6px;
+        font-size: 12px;
+      }
+
+      .commodity-name {
+        font-weight: 600;
+        color: #333;
+      }
+
+      .commodity-value {
+        font-weight: 700;
+        padding: 3px 8px;
+        border-radius: 4px;
+      }
+
+      .commodity-box.inflasi .commodity-value {
+        color: #d32f2f;
+        background: #ffebee;
+      }
+
+      .commodity-box.deflasi .commodity-value {
+        color: #388e3c;
+        background: #e8f5e9;
+      }
+
+      /* IPH Section */
+      .iph-section {
+        background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+        padding: 20px 30px;
+      }
+
+      .iph-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 15px;
+      }
+
+      .iph-title {
+        font-size: 16px;
+        font-weight: 800;
+        color: #e65100;
+        text-transform: uppercase;
+      }
+
+      .iph-subtitle {
+        font-size: 12px;
+        color: #666;
+        margin-top: 3px;
+      }
+
+      .iph-highlight {
+        background: #e65100;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .iph-highlight-value {
+        font-size: 32px;
+        font-weight: 900;
+      }
+
+      .iph-highlight-label {
+        font-size: 10px;
+        opacity: 0.9;
+      }
+
+      .iph-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+      }
+
+      .iph-card {
+        background: white;
+        border-radius: 8px;
+        padding: 12px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+
+      .iph-card-name {
+        font-size: 10px;
+        font-weight: 600;
+        color: #666;
+        margin-bottom: 5px;
+      }
+
+      .iph-card-value {
+        font-size: 20px;
+        font-weight: 800;
+      }
+
+      .iph-card-value.up {
+        color: #d32f2f;
+      }
+      .iph-card-value.down {
+        color: #388e3c;
+      }
+
+      .iph-card-change {
+        font-size: 9px;
+        color: #888;
+      }
+
+      /* Price Table */
+      .price-section {
+        padding: 20px 30px;
+        background: white;
+      }
+
+      .price-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 11px;
+      }
+
+      .price-table th {
+        background: #1a5f4a;
+        color: white;
+        padding: 10px 8px;
+        text-align: left;
+        font-weight: 700;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+
+      .price-table td {
+        padding: 8px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .price-table tr:nth-child(even) {
+        background: #f8f9fa;
+      }
+
+      .price-change {
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 10px;
+      }
+
+      .price-change.up {
+        color: #d32f2f;
+        background: #ffebee;
+      }
+
+      .price-change.down {
+        color: #388e3c;
+        background: #e8f5e9;
+      }
+
+      .price-change.stable {
+        color: #757575;
+        background: #f5f5f5;
+      }
+
+      /* TPID Section */
+      .tpid-section {
+        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        padding: 20px 30px;
+      }
+
+      .tpid-title {
+        font-size: 16px;
+        font-weight: 800;
+        color: #1565c0;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+
+      .tpid-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .tpid-card {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+      }
+
+      .tpid-card-title {
+        font-size: 12px;
+        font-weight: 700;
+        color: #1565c0;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .tpid-card-content {
+        font-size: 11px;
+        color: #555;
+        line-height: 1.5;
+      }
+
+      .tpid-stat {
+        font-size: 24px;
+        font-weight: 900;
+        color: #1565c0;
+      }
+
+      /* Forecast Section */
+      .forecast-section {
+        background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+        padding: 20px 30px;
+      }
+
+      .forecast-title {
+        font-size: 16px;
+        font-weight: 800;
+        color: #c2185b;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+
+      .forecast-content {
+        background: white;
+        border-radius: 10px;
+        padding: 18px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+      }
+
+      .forecast-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .forecast-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 11px;
+      }
+
+      .forecast-bullet {
+        width: 20px;
+        height: 20px;
+        background: #c2185b;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        font-weight: bold;
+        flex-shrink: 0;
+      }
+
+      .forecast-text {
+        color: #555;
+        line-height: 1.4;
+      }
+
+      /* Footer */
+      .footer {
+        background: #1a5f4a;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-left {
+        font-size: 10px;
+        opacity: 0.9;
+      }
+
+      .footer-right {
+        display: flex;
+        gap: 15px;
+        font-size: 10px;
+      }
+
+      .footer-link {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      /* Target Box */
+      .target-box {
+        background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+        border: 2px solid #ffc107;
+        border-radius: 10px;
+        padding: 12px 20px;
+        margin: 15px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .target-label {
+        font-size: 12px;
+        font-weight: 700;
+        color: #f57c00;
+      }
+
+      .target-value {
+        font-size: 24px;
+        font-weight: 900;
+        color: #e65100;
+      }
+
+      .target-status {
+        font-size: 11px;
+        color: #388e3c;
+        font-weight: 700;
+        background: #e8f5e9;
+        padding: 5px 12px;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <div class="header-title">Perkembangan Inflasi & Indeks Harga</div>
+          <div class="header-subtitle">Provinsi Nusa Tenggara Barat</div>
+          <div class="header-date">
+            November - Awal Desember 2025 | Berdasarkan Data BPS & Rakor TPID
+            NTB
+          </div>
+        </div>
+      </div>
+      <div class="ranking-badge">📊 Peringkat 17 Nasional (y-to-d)</div>
+    </div>
+
+    <!-- Main Inflation Highlight -->
+    <div class="inflation-highlight">
+      <div class="inflation-box mtm">
+        <div class="inflation-label">Month to Month (mtm)</div>
+        <div class="inflation-value">0,34%</div>
+        <div class="inflation-desc">Inflasi Bulanan Nov 2025</div>
+      </div>
+      <div class="inflation-box ytd">
+        <div class="inflation-label">Year to Date (ytd)</div>
+        <div class="inflation-value">2,27%</div>
+        <div class="inflation-desc">Kumulatif Jan-Nov 2025</div>
+      </div>
+      <div class="inflation-box yoy">
+        <div class="inflation-label">Year on Year (yoy)</div>
+        <div class="inflation-value">2,74%</div>
+        <div class="inflation-desc">IHK: 109,37</div>
+      </div>
+    </div>
+
+    <!-- Target Box -->
+    <div class="target-box">
+      <div class="target-label">🎯 Target Inflasi Nasional 2025:</div>
+      <div class="target-value">2,5% ± 1%</div>
+      <div class="target-status">✓ DALAM SASARAN</div>
+    </div>
+
+    <!-- City Comparison -->
+    <div class="section">
+      <div class="section-title">📍 Inflasi Kota Perhitungan IHK</div>
+      <div class="city-grid">
+        <div class="city-card">
+          <div class="city-name">🏙️ Kota Mataram</div>
+          <div class="city-stats">
+            <div class="city-stat">
+              <div class="city-stat-label">MtM</div>
+              <div class="city-stat-value">0,32%</div>
+            </div>
+            <div class="city-stat">
+              <div class="city-stat-label">YoY</div>
+              <div class="city-stat-value">2,86%</div>
+            </div>
+            <div class="city-stat">
+              <div class="city-stat-label">IHK</div>
+              <div class="city-stat-value">109,86</div>
+            </div>
+          </div>
+        </div>
+        <div class="city-card">
+          <div class="city-name">🏙️ Kab. Sumbawa</div>
+          <div class="city-stats">
+            <div class="city-stat">
+              <div class="city-stat-label">MtM</div>
+              <div class="city-stat-value">0,29%</div>
+            </div>
+            <div class="city-stat">
+              <div class="city-stat-label">YoY</div>
+              <div class="city-stat-value">2,70%</div>
+            </div>
+            <div class="city-stat">
+              <div class="city-stat-label">IHK</div>
+              <div class="city-stat-value">109,12</div>
+            </div>
+          </div>
+        </div>
+        <div class="city-card">
+          <div class="city-name">🏙️ Kota Bima</div>
+          <div class="city-stats">
+            <div class="city-stat">
+              <div class="city-stat-label">MtM</div>
+              <div class="city-stat-value">0,59%</div>
+            </div>
+            <div class="city-stat">
+              <div class="city-stat-label">YoY</div>
+              <div class="city-stat-value">2,44%</div>
+            </div>
+            <div class="city-stat">
+              <div class="city-stat-label">IHK</div>
+              <div class="city-stat-value">109,56</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Commodity Section -->
+    <div class="section" style="background: #f5f5f5">
+      <div class="section-title">
+        📦 Komoditas Penyumbang Inflasi/Deflasi November 2025
+      </div>
+      <div class="commodity-grid">
+        <div class="commodity-box inflasi">
+          <div class="commodity-title">
+            <div class="commodity-icon">📈</div>
+            PENYUMBANG INFLASI
+          </div>
+          <div class="commodity-list">
+            <div class="commodity-item">
+              <span class="commodity-name">🍅 Tomat</span>
+              <span class="commodity-value">+0,09%</span>
+            </div>
+            <div class="commodity-item">
+              <span class="commodity-name">💎 Emas Perhiasan</span>
+              <span class="commodity-value">+0,08%</span>
+            </div>
+            <div class="commodity-item">
+              <span class="commodity-name">✈️ Angkutan Udara</span>
+              <span class="commodity-value">+0,05%</span>
+            </div>
+            <div class="commodity-item">
+              <span class="commodity-name">🐟 Ikan Teri</span>
+              <span class="commodity-value">+0,05%</span>
+            </div>
+            <div class="commodity-item">
+              <span class="commodity-name">🧅 Bawang Merah</span>
+              <span class="commodity-value">+0,05%</span>
+            </div>
+          </div>
+        </div>
+        <div class="commodity-box deflasi">
+          <div class="commodity-title">
+            <div class="commodity-icon">📉</div>
+            PENYUMBANG DEFLASI
+          </div>
+          <div class="commodity-list">
+            <div class="commodity-item">
+              <span class="commodity-name">🍗 Daging Ayam Ras</span>
+              <span class="commodity-value">-0,06%</span>
+            </div>
+            <div class="commodity-item">
+              <span class="commodity-name">🍚 Beras</span>
+              <span class="commodity-value">-0,05%</span>
+            </div>
+            <div class="commodity-item">
+              <span class="commodity-name">🦐 Udang Basah</span>
+              <span class="commodity-value">-0,04%</span>
+            </div>
+            <div class="commodity-item">
+              <span class="commodity-name">🌶️ Cabai Rawit</span>
+              <span class="commodity-value">-0,02%</span>
+            </div>
+            <div class="commodity-item">
+              <span class="commodity-name">🥬 Kol Putih</span>
+              <span class="commodity-value">-0,02%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IPH Section -->
+    <div class="iph-section">
+      <div class="iph-header">
+        <div>
+          <div class="iph-title">
+            📊 Indeks Perkembangan Harga (IPH) M1 Desember 2025
+          </div>
+          <div class="iph-subtitle">
+            Data SP2KP Kemendag s.d. 5 Desember 2025
+          </div>
+        </div>
+        <div class="iph-highlight">
+          <div class="iph-highlight-value">+6,12%</div>
+          <div class="iph-highlight-label">NTB TERTINGGI NASIONAL</div>
+        </div>
+      </div>
+      <div style="margin-bottom: 12px; font-size: 12px; color: #666">
+        <strong>Komoditas Penyumbang IPH NTB:</strong> 🌶️ Cabai Rawit, 🧅 Bawang
+        Merah, 🥩 Daging Sapi
+      </div>
+      <div class="iph-grid">
+        <div class="iph-card">
+          <div class="iph-card-name">Kab. Lombok Timur</div>
+          <div class="iph-card-value up">+11,15%</div>
+          <div class="iph-card-change">Tertinggi Kab/Kota</div>
+        </div>
+        <div class="iph-card">
+          <div class="iph-card-name">Kab. Lombok Tengah</div>
+          <div class="iph-card-value up">+7,08%</div>
+          <div class="iph-card-change">Cabai Rawit, Bawang</div>
+        </div>
+        <div class="iph-card">
+          <div class="iph-card-name">Beras Medium</div>
+          <div class="iph-card-value" style="color: #1565c0">Rp13.500</div>
+          <div class="iph-card-change">Sesuai HET</div>
+        </div>
+        <div class="iph-card">
+          <div class="iph-card-name">Beras Premium</div>
+          <div class="iph-card-value" style="color: #1565c0">Rp14.900</div>
+          <div class="iph-card-change">Sesuai HET</div>
+        </div>
+        <div class="iph-card">
+          <div class="iph-card-name">IPH Beras NTB</div>
+          <div class="iph-card-value up">+0,21%</div>
+          <div class="iph-card-change">Rp13.964/kg</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Price Table -->
+    <div class="price-section">
+      <div class="section-title">
+        💰 Harga Bapokting Terkini (12 Desember 2025)
+      </div>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Komoditas</th>
+            <th>Harga (Rp/kg)</th>
+            <th>HET/HAP</th>
+            <th>Perubahan</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>🍚 Beras Medium</strong></td>
+            <td>12.750 - 13.500</td>
+            <td>13.500</td>
+            <td><span class="price-change stable">Stabil</span></td>
+            <td>✓ Sesuai HET</td>
+          </tr>
+          <tr>
+            <td><strong>🍚 Beras Premium</strong></td>
+            <td>13.400 - 14.900</td>
+            <td>14.900</td>
+            <td><span class="price-change stable">Stabil</span></td>
+            <td>✓ Sesuai HET</td>
+          </tr>
+          <tr>
+            <td><strong>🌶️ Cabai Merah Keriting</strong></td>
+            <td>52.867</td>
+            <td>37.000-55.000</td>
+            <td><span class="price-change down">-833 (-2%)</span></td>
+            <td>✓ Dalam HAP</td>
+          </tr>
+          <tr>
+            <td><strong>🌶️ Cabai Rawit Merah</strong></td>
+            <td>65.867</td>
+            <td>40.000-57.000</td>
+            <td><span class="price-change down">-1.050 (-2%)</span></td>
+            <td>⚠️ Di atas HAP</td>
+          </tr>
+          <tr>
+            <td><strong>🧅 Bawang Merah</strong></td>
+            <td>49.033</td>
+            <td>36.500-41.500</td>
+            <td><span class="price-change down">-267 (-1%)</span></td>
+            <td>⚠️ Di atas HAP</td>
+          </tr>
+          <tr>
+            <td><strong>🍗 Daging Ayam Ras</strong></td>
+            <td>43.150</td>
+            <td>40.000</td>
+            <td><span class="price-change up">+67 (+0,2%)</span></td>
+            <td>⚠️ Di atas HAP</td>
+          </tr>
+          <tr>
+            <td><strong>🥚 Telur Ayam Ras</strong></td>
+            <td>30.320</td>
+            <td>30.000</td>
+            <td><span class="price-change down">-30</span></td>
+            <td>⚠️ Sedikit di atas</td>
+          </tr>
+          <tr>
+            <td><strong>🛢️ Minyakita</strong></td>
+            <td>17.802</td>
+            <td>15.700</td>
+            <td><span class="price-change stable">Stabil</span></td>
+            <td>⚠️ Di atas HET</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TPID Section -->
+    <div class="tpid-section">
+      <div class="tpid-title">🏛️ Hasil Rakor TPID NTB (4 Desember 2025)</div>
+      <div class="tpid-grid">
+        <div class="tpid-card">
+          <div class="tpid-card-title">📊 Operasi Pasar Murah 2025</div>
+          <div class="tpid-card-content">
+            <div class="tpid-stat">241 kali</div>
+            Pelaksanaan OPM se-NTB sepanjang 2025 oleh Pemda, Bank Indonesia,
+            dan stakeholder terkait
+          </div>
+        </div>
+        <div class="tpid-card">
+          <div class="tpid-card-title">🌾 Stok Pangan BULOG NTB</div>
+          <div class="tpid-card-content">
+            <div class="tpid-stat">163.000 MT</div>
+            Beras tersalurkan 2025 + 2 Juta Liter Minyak Goreng. Stok mencukupi
+            untuk HBKN Nataru
+          </div>
+        </div>
+        <div class="tpid-card">
+          <div class="tpid-card-title">🚨 Pengawasan Distribusi</div>
+          <div class="tpid-card-content">
+            <strong>8 Kasus</strong> penertiban distributor beras di atas HET
+            sudah ditindaklanjuti.<br />
+            <strong>2 Kasus</strong> beras oplosan dalam penyidikan Polda NTB
+          </div>
+        </div>
+        <div class="tpid-card">
+          <div class="tpid-card-title">🎯 Kerangka Pengendalian 4K</div>
+          <div class="tpid-card-content">
+            <strong>K</strong>eterjangkauan Harga •
+            <strong>K</strong>etersediaan Pasokan • <strong>K</strong>elancaran
+            Distribusi • <strong>K</strong>omunikasi Efektif
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forecast Section -->
+    <div class="forecast-section">
+      <div class="forecast-title">
+        🔮 Proyeksi & Strategi Menjelang HBKN Nataru 2025/2026
+      </div>
+      <div class="forecast-content">
+        <div class="forecast-list">
+          <div class="forecast-item">
+            <div class="forecast-bullet">1</div>
+            <div class="forecast-text">
+              <strong>Historis Akhir Tahun:</strong> Inflasi selalu terjadi di
+              Nov-Des. Komoditas rawan: telur ayam, daging ayam, cabai merah,
+              emas perhiasan, angkutan udara
+            </div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-bullet">2</div>
+            <div class="forecast-text">
+              <strong>Intensifikasi OPM:</strong> Operasi Pasar Murah masif di
+              berbagai daerah selama periode HBKN Nataru untuk menekan lonjakan
+              harga
+            </div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-bullet">3</div>
+            <div class="forecast-text">
+              <strong>Sidak Pasar:</strong> Pemantauan harga & pasokan real-time
+              di pasar utama. Posko Pengawasan Inflasi dibentuk
+            </div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-bullet">4</div>
+            <div class="forecast-text">
+              <strong>Cuaca & Produksi:</strong> Curah hujan tinggi berpotensi
+              menghambat produksi hortikultura, khususnya cabai dan bawang
+              merah. Tingkatkan produksi lokal melalui gerakan menanam dan
+              didukung oleh teknologi penyimpanan cold storage
+            </div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-bullet">5</div>
+            <div class="forecast-text">
+              <strong>Program Infratani:</strong> Penguatan produksi cabai
+              melalui integrasi klaster binaan untuk efisiensi harga bahan baku
+            </div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-bullet">6</div>
+            <div class="forecast-text">
+              <strong>Koordinasi Forkopimda:</strong> Identifikasi potensi
+              kerawanan, kelancaran distribusi logistik, dan pengamanan jalur
+              distribusi
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-left">
+        <strong>Sumber Data:</strong> BPS Provinsi NTB, Bank Indonesia KPw NTB,
+        Dinas Perdagangan NTB, SP2KP Kemendag<br />
+        <strong>Disusun oleh:</strong> Tim Pengendalian Inflasi Daerah (TPID)
+        Provinsi Nusa Tenggara Barat | Desember 2025
+      </div>
+      <div class="footer-right">
+        <span class="footer-link">🌐 ntb.bps.go.id</span>
+        <span class="footer-link">📧 bps5200@bps.go.id</span>
+        <span class="footer-link">📱 @bpsntb</span>
+      </div>
+    </div>
+  </body>
+</html>
